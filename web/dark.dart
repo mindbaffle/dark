@@ -178,7 +178,7 @@ void wadFileLoaded(WAD.WadFile wadFile) {
 
   resources = new GameResources(wadFile);
   resources.loadAll();
-  loadLevel("E1M1");
+  loadLevel("E1M2");
 }
 
 void loadLevel(String levelName) {
@@ -405,7 +405,7 @@ class SoundChannel {
   }
   
   void stop() {
-    source.stop();
+    source.stop(0.0);
   }
   
   void finished() {
@@ -421,9 +421,6 @@ class SoundChannel {
   
   void update() {
     if (pos!=null) {
-      pannerNode.setPosition(pos.x, pos.y, pos.z);
-      pannerNode.setPosition(pos.x, pos.y, pos.z);
-      pannerNode.setPosition(pos.x, pos.y, pos.z);
       pannerNode.setPosition(pos.x, pos.y, pos.z);
     }
   }
